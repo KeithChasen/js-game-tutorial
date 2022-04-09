@@ -1,10 +1,11 @@
 let canvas = document.getElementById("gameScreen");
 let ctx = canvas.getContext('2d');
 
+const GAME_WIDTH = 800;
+const GAME_HEIGHT = 600;
+
 ctx.clearRect(0, 0, 800, 600);
 
-ctx.fillStyle = '#f00';
-ctx.fillRect(20, 20, 100, 100);
+let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
 
-ctx.fillStyle = '#00f';
-ctx.fillRect(120, 150, 50, 50);
+paddle.draw(ctx);
